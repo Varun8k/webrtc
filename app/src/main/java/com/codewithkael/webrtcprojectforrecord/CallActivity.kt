@@ -235,4 +235,9 @@ class CallActivity : AppCompatActivity(), NewMessageInterface {
     private fun setWhoToCallLayoutVisible() {
         binding.whoToCallLayout.visibility = View.VISIBLE
     }
+
+    override fun onDestroy() {
+        socketRepository?.disconnect()
+        super.onDestroy()
+    }
 }
