@@ -21,7 +21,7 @@ class SocketRepository(private val messageInterface: NewMessageInterface) {
     fun initSocket(username: String) {
         userName = username
 
-        val serverUrl = "http://192.168.1.70:3000"
+        val serverUrl = "http://10.0.2.2:3000"
         try {
             val options = IO.Options()
             options.reconnection = true
